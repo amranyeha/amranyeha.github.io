@@ -1,0 +1,50 @@
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+.container {
+	background-color: whitesmoke;
+	min-height: 100vh;
+	justify-content: center;
+	display: flex;
+	text-align: center;
+	align-items: center;
+}
+
+.container .row {
+	display: block;
+	padding: 100px;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+	position: relative;
+}
+
+.container .row .input {
+	margin-bottom: 1rem;
+}
+
+.container .row .input input {
+	border-radius: 50px;
+	border: 2px solid #b6895b;
+	height: 50px;
+	width: 350px;
+	font-size: 1.4rem;
+
+}
+
+.container .row .btn button {
+	border-radius: 50px;
+	border: 2px solid #b6895b;
+	height: 50px;
+	width: 350px;
+	background-color: #b6895b;
+	font-size: 1.4rem; 
+}
+
+.container .row h3 a {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
