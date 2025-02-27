@@ -1,28 +1,2594 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Web Fullscreen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FANPAY</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+        :root {
+            --pr: #1976d2;
+            /* background menu index start */
+            --bg-menu1: url(https://lh3.googleusercontent.com/-x6WLm9nL5V4/Y2E9ztmvgHI/AAAAAAAAAYM/BjQpM7iaI7A6sBuGXc7S2CR1vHlFa9aGQCNcBGAsYHQ/s1600/1667317196267573-0.png);
+            --bg-menu2: url(https://lh3.googleusercontent.com/-VWRp3gv3roA/Y2E-vUSdvMI/AAAAAAAAAYY/EeBKB6qSzUYdf44dcd5uueBoxFhJEgUhACNcBGAsYHQ/s1600/1667317435259414-0.png);
+            --bg-menu3: url(https://lh3.googleusercontent.com/-5T_5gYWEIcI/Y2E6B0U6seI/AAAAAAAAAXw/DWEs8K2pKxAt9PWUYTnADYDe5eXbVIZsACNcBGAsYHQ/s1600/1667316228594439-0.png);
+            --bg-menu4: url(https://lh3.googleusercontent.com/-RLcivcWbCfQ/Y2E6AldC1uI/AAAAAAAAAXs/kAG_tcKDuJcacVKYSBogwSEtVc1C4-IkwCNcBGAsYHQ/s1600/1667316223861363-1.png);
+            --bg-menu5: url(https://lh3.googleusercontent.com/-HBFE_tAlYWA/Y2E5_VPWB4I/AAAAAAAAAXo/PspTPrtm6JALrwn8y9pO5wZ-tcx7MWGSQCNcBGAsYHQ/s1600/1667316218551381-2.png);
+            --bg-menu6: url(https://lh3.googleusercontent.com/-ue61DR_m0V8/Y2E9yX0ig5I/AAAAAAAAAYI/-Pmeiy0y7t0jKvLCDZy8AM7xbwW8BsfZACNcBGAsYHQ/s1600/1667317191153587-1.png);
+            --bg-menu7: url(https://lh3.googleusercontent.com/-j9qMoT7dLBE/Y2E5-DjE0wI/AAAAAAAAAXk/Wit6dmUAVSkUJtTp8xUQffXOhQ_9pijcACNcBGAsYHQ/s1600/1667316213142021-3.png);
+            --bg-menu8: url(https://lh3.googleusercontent.com/-dildg5ysHh4/Y2E58gx0EhI/AAAAAAAAAXg/i89uiGJaNBcu15xoV1NjBOSARmT8xM7zQCNcBGAsYHQ/s1600/1667316209084509-4.png);
+            /* background menu index end */
+
+            /* background menu index start */
+            --bg1-menu1: url(https://i.ibb.co.com/23L2266P/20250212-205731.jpg);
+            --bg1-menu2: url(https://i.ibb.co.com/jvCyJRyY/20250212-205533.jpg);
+            --bg1-menu3: url(https://i.ibb.co.com/0Tn2nkM/20250212-205846.jpg);
+            --bg1-menu4: url(https://i.ibb.co.com/Nd81jPVp/20250212-205802.jpg);
+            /* background menu index end */
+
+            /* background menu index start */
+            --bg2-menu1: url(https://i.ibb.co/t2V1y1d/20240408-214041.jpg);
+            --bg2-menu2: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+            --bg2-menu3: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+            --bg2-menu4: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+            /* background menu index end */
+
+            /* background menu popup pulsa nasional start */
+            --popup_produk1_menu1: url(https://play-lh.googleusercontent.com/DBzJQ2z8p3n_YPQkmbc6luCfO3OhafRkOZimMoXFXBMoUokLu6RPDRgVM86U_QkRVNE=w240-h480-rw);
+            --popup_produk1_menu2: url(https://play-lh.googleusercontent.com/VIgl9bFRZ4TVrRF6kZCgIyd5cP_4WnXyFjKSNPnWrR2xSxFuHyT_CN2vZsG7Eh98ig=w240-h480-rw);
+            --popup_produk1_menu3: url(https://play-lh.googleusercontent.com/Vd_kyI6g3s6EIlbOqjiyF3uXbpjWqFulTwLu1tWLtQGsvjF702HnNU9GzUD36YUfn6Sc=w240-h480-rw);
+            --popup_produk1_menu4: url(https://play-lh.googleusercontent.com/BKxKiBsYJl80g_HsUzlqi3H0_gPYX3MZj2VhnfDPV2trrxMpor4RPBEirYad8LrYo30r=w240-h480-rw);
+            --popup_produk1_menu5: url(https://lh3.googleusercontent.com/-TWpbFkH1bUY/Y19TZ_brHFI/AAAAAAAAAWM/xDB4zYUJZqsLrDqB6tTnmkrYI0YKP5MrACNcBGAsYHQ/s1600/1667191652991428-4.png);
+            --popup_produk1_menu6: url(https://play-lh.googleusercontent.com/XorDkMZKOdfJIga80HvWlzYs6J_9ahVdWFB3BCAtI20zhh3bSmarlyVX2bJTRGmUHXBm=w240-h480-rw);
+            --popup_produk1_menu7: url(https://play-lh.googleusercontent.com/iaIrBzzbwF7QwwcMSYxtvEL7S9rYLpPlhfoxqmhAtOIn0UISv7eMv4ZAfAA1lTYb1g=w480-h960-rw);
+            /* background menu popup pulsa nasional end */
+
+            /* background menu popup paket internet start */
+            --popup_produk2_menu1: url(https://play-lh.googleusercontent.com/DBzJQ2z8p3n_YPQkmbc6luCfO3OhafRkOZimMoXFXBMoUokLu6RPDRgVM86U_QkRVNE=w240-h480-rw);
+            --popup_produk2_menu2: url(https://play-lh.googleusercontent.com/VIgl9bFRZ4TVrRF6kZCgIyd5cP_4WnXyFjKSNPnWrR2xSxFuHyT_CN2vZsG7Eh98ig=w240-h480-rw);
+            --popup_produk2_menu3: url(https://play-lh.googleusercontent.com/Vd_kyI6g3s6EIlbOqjiyF3uXbpjWqFulTwLu1tWLtQGsvjF702HnNU9GzUD36YUfn6Sc=w240-h480-rw);
+            --popup_produk2_menu4: url(https://play-lh.googleusercontent.com/BKxKiBsYJl80g_HsUzlqi3H0_gPYX3MZj2VhnfDPV2trrxMpor4RPBEirYad8LrYo30r=w240-h480-rw);
+            --popup_produk2_menu5: url(https://lh3.googleusercontent.com/-TWpbFkH1bUY/Y19TZ_brHFI/AAAAAAAAAWM/xDB4zYUJZqsLrDqB6tTnmkrYI0YKP5MrACNcBGAsYHQ/s1600/1667191652991428-4.png);
+            --popup_produk2_menu6: url(https://play-lh.googleusercontent.com/XorDkMZKOdfJIga80HvWlzYs6J_9ahVdWFB3BCAtI20zhh3bSmarlyVX2bJTRGmUHXBm=w240-h480-rw);
+            --popup_produk2_menu7: url(https://play-lh.googleusercontent.com/iaIrBzzbwF7QwwcMSYxtvEL7S9rYLpPlhfoxqmhAtOIn0UISv7eMv4ZAfAA1lTYb1g=w480-h960-rw);
+            /* background menu popup paket internet end */
+
+            /* background menu popup topup games start */
+            --popup_produk3_menu1: url(https://play-lh.googleusercontent.com/UELcKakJhwKhdDJIwpdvd1RjE3ClRXiG0nhChs69fBv-nn5ZkgSp2EkkRTnJYFtYoZyu=w480-h960-rw);
+            --popup_produk3_menu2: url(https://play-lh.googleusercontent.com/9zACfwWC3nLgQls-vt4lpz8N0Vv4zWMUXtcFth3oBT5789vmsTktH_fCNXHsGdmtOw4=w480-h960-rw);
+            --popup_produk3_menu3: url(https://play-lh.googleusercontent.com/JRd05pyBH41qjgsJuWduRJpDeZG0Hnb0yjf2nWqO7VaGKL10-G5UIygxED-WNOc3pg=w240-h480-rw);
+            --popup_produk3_menu4: url(https://play-lh.googleusercontent.com/UciZ0KrcpAPk8iDNpjvF4CSz_ABgqJSrLRcoZxfZYIgs7eO5-fMfHgA8lGfiiRzkOjnZ=w240-h480-rw);
+            --popup_produk3_menu5: url(https://play-lh.googleusercontent.com/caDiIvFl-VDvEPlzbHuypmXMTIwAiA8WesvsUIcFoQqokLaYRSYh-Y0LpR4RFhGgytEg=w480-h960-rw);
+            /* background menu popup topup games end */
+
+            /* background menu popup topup ewallet start */
+            --popup_produk4_menu1: url(https://play-lh.googleusercontent.com/pqoyI2JaPd3uOYt-5GzVqi82OvhBC9Jf-EPQqPDhCbyekdKZe5r-hOGlF4qE1ddWe3o=w240-h480-rw);
+            --popup_produk4_menu2: url(https://play-lh.googleusercontent.com/xtspW80p6GgYKlVzopgHYeepRf4ZXuOR_vsNLOHyKOgzSb-TMJkNEAY7x6OQbC9Y3Mwo=w240-h480-rw);
+            --popup_produk4_menu3: url(https://play-lh.googleusercontent.com/XrIOKJrR_RqOZU0wEyN_SfrtUMyvUI3ZGlG6FWS-OJLGCP3jdQA8Jzuu_rhj2WlTdRCv=w240-h480-rw);
+            --popup_produk4_menu4: url(https://play-lh.googleusercontent.com/-kwEfsDenlwTCoWTe2BCAOv9YFPE4m5EReErdU_BsYYcISAtQ16JflXuwU8Okuw3Y6E=w240-h480-rw);
+            --popup_produk4_menu5: url(https://play-lh.googleusercontent.com/LHX1dwx4ZAZqY9Uhxt-uSJU7Em2aY-7YmY6-cJ_Zf39I9cCoORwgYHfhzmuRqWu14drt=w480-h960-rw);
+            /* background menu popup topup ewallet end */
+
+            /* background menu popup token pln start */
+            --popup_produk5_menu1: url(https://play-lh.googleusercontent.com/C_ABhRDwsX3DW8xmfPiukQCIcjTWL5O18IdszUSYL5FqT142eNKSZsMcwRd4djMUDIY);
+            --popup_produk5_menu2: url(https://play-lh.googleusercontent.com/C_ABhRDwsX3DW8xmfPiukQCIcjTWL5O18IdszUSYL5FqT142eNKSZsMcwRd4djMUDIY);
+            --popup_produk5_menu3: url();
+            --popup_produk5_menu4: url();
+            /* background menu popup token pln end */
+
+            /* background menu popup voucher start */
+            --popup_produk6_menu1: url(data:image/png;base64,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);
+            --popup_produk6_menu2: url(data:image/png;base64,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 );
+            --popup_produk6_menu3: url(data:image/png;base64,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);
+            --popup_produk6_menu4: url();
+            /* background menu popup voucher end */
+
+            /* background menu popup paket telpon start */
+            --popup_produk7_menu1: url(https://play-lh.googleusercontent.com/DBzJQ2z8p3n_YPQkmbc6luCfO3OhafRkOZimMoXFXBMoUokLu6RPDRgVM86U_QkRVNE=w240-h480-rw);
+            --popup_produk7_menu2: url(https://play-lh.googleusercontent.com/VIgl9bFRZ4TVrRF6kZCgIyd5cP_4WnXyFjKSNPnWrR2xSxFuHyT_CN2vZsG7Eh98ig=w240-h480-rw);
+            --popup_produk7_menu3: url(https://play-lh.googleusercontent.com/Vd_kyI6g3s6EIlbOqjiyF3uXbpjWqFulTwLu1tWLtQGsvjF702HnNU9GzUD36YUfn6Sc=w240-h480-rw);
+            --popup_produk7_menu4: url(https://play-lh.googleusercontent.com/BKxKiBsYJl80g_HsUzlqi3H0_gPYX3MZj2VhnfDPV2trrxMpor4RPBEirYad8LrYo30r=w240-h480-rw);
+            --popup_produk7_menu5: url(https://lh3.googleusercontent.com/-TWpbFkH1bUY/Y19TZ_brHFI/AAAAAAAAAWM/xDB4zYUJZqsLrDqB6tTnmkrYI0YKP5MrACNcBGAsYHQ/s1600/1667191652991428-4.png);
+            /* background menu popup paket telpon end */
+
+            /* background menu popup paket sms start */
+            --popup_produk8_menu1: url(https://play-lh.googleusercontent.com/DBzJQ2z8p3n_YPQkmbc6luCfO3OhafRkOZimMoXFXBMoUokLu6RPDRgVM86U_QkRVNE=w240-h480-rw);
+            --popup_produk8_menu2: url(https://play-lh.googleusercontent.com/BKxKiBsYJl80g_HsUzlqi3H0_gPYX3MZj2VhnfDPV2trrxMpor4RPBEirYad8LrYo30r=w240-h480-rw);
+            --popup_produk8_menu3: url(https://lh3.googleusercontent.com/-TWpbFkH1bUY/Y19TZ_brHFI/AAAAAAAAAWM/xDB4zYUJZqsLrDqB6tTnmkrYI0YKP5MrACNcBGAsYHQ/s1600/1667191652991428-4.png);
+            --popup_produk8_menu4: url();
+            /* background menu popup paket sms end */
+
+
+            /* background menu index start */
+            --bg2-menu1_ssh_menu: url(https://i.ibb.co/t2V1y1d/20240408-214041.jpg);
+            --bg2-menu2_ssh_menu: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+            --bg2-menu3_ssh_menu: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+            --bg2-menu4_ssh_menu: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+            /* background menu index end */
+
+            /* background menu popup pulsa nasional start */
+            --popup_produk1_menu1_ssh_menu: url(https://i.ibb.co/t2V1y1d/20240408-214041.jpg);
+            --popup_produk1_menu2_ssh_menu: url(https://i.ibb.co/t2V1y1d/20240408-214041.jpg);
+            --popup_produk1_menu3_ssh_menu: url(https://i.ibb.co/t2V1y1d/20240408-214041.jpg);
+            /* background menu popup pulsa nasional end */
+
+            /* background menu popup paket internet start */
+            --popup_produk2_menu1_ssh_menu: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+            --popup_produk2_menu2_ssh_menu: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+            --popup_produk2_menu3_ssh_menu: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+
+            /* background menu popup paket internet end */
+
+            /* background menu popup topup games start */
+            --popup_produk3_menu1_ssh_menu: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+            --popup_produk3_menu2_ssh_menu: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+            --popup_produk3_menu3_ssh_menu: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+
+            /* background menu popup topup games end */
+
+            /* background menu popup topup ewallet start */
+            --popup_produk4_menu1_ssh_menu: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+            --popup_produk4_menu2_ssh_menu: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+            --popup_produk4_menu3_ssh_menu: url(https://i.ibb.co/v3S6jLj/20240408-214141.jpg);
+
+            /* background menu popup topup ewallet end */
+
         }
-        iframe {
+
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            background-color: rgb(238, 235, 235);
+        }
+
+        .disable-link {
+            pointer-events: none;
+            /* Menonaktifkan klik */
+            color: gray;
+            /* Mengubah warna menjadi abu-abu */
+            text-decoration: none;
+            /* Menghilangkan garis bawah */
+            filter: grayscale(100%);
+        }
+
+        .parrent .header {
+            /* position: fixed; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            background-color: var(--pr);
+            width: 100vw;
+            height: 70px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            position: relative;
+            z-index: 999;
+        }
+
+        .parrent .header .wrapper_header {
+            display: flex;
+            gap: 10px;
+            /* border: 1px solid black */
+        }
+
+        .parrent .header .header-menu1,
+        .parrent .header .header-menu2,
+        .parrent .header .header-menu3 {
+            text-align: center;
+            /* width: 25vw; */
+            height: 60px;
+            /* background-color: white; */
+            /* border: 2px solid white; */
+            /* box-shadow: 0 0 3px white; */
+            border-radius: 10px;
+            margin-bottom: 0;
+            margin: 0 10vw;
+            ;
+        }
+
+        .parrent .header .title_qris {
+            /* margin: 0;
+            background-color: yellow; */
+        }
+
+        .parrent .header .title_qris_manual p,
+        .parrent .header .title_qris_otomatis p,
+        .parrent .header .title_keluhan p {
+            color: white;
+            font-weight: 550;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            margin: 0;
+            /* background-color: yellowgreen; */
+            text-transform: capitalize;
+        }
+
+        .parrent .header .header-menu1 .image_qris_manual,
+        .parrent .header .header-menu2 .image_qris_otomatis,
+        .parrent .header .header-menu3 .image_keluhan {
+            margin: auto;
+            width: 40px;
+            height: 40px;
+            /* border: 1px solid white; */
+            background-position: center;
+            background-size: cover;
+            border-radius: 8px;
+        }
+
+        .parrent .qris {
             position: absolute;
-            top: 0;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            border-radius: 37px;
+            background-color: grey;
+            margin-top: -200%;
+            /* display: none; */
+            transition: 0.2s;
+            /* box-shadow: 0 0 3px var(--pr); */
+        }
+
+        .parrent .qris.active {
+            margin-top: 0;
+            /* display: inline-flex; */
+            transition: 0.5s;
+        }
+
+        .parrent .qris .container-qris {
+            position: relative;
+            height: 85%;
+            width: 85%;
+            /* border: 1px solid black; */
+            border-radius: 10px;
+            box-shadow: 0 0 8px black;
+            margin-top: 10px;
+            background-color: whitesmoke;
+        }
+
+        /* .parrent .qris .container-qris.active {
+            margin-top:  0;
+            transition: 0.4s;
+        } */
+        .parrent .qris .container-qris .popup-qris-image {
+            background-image: url(https://lh3.googleusercontent.com/-X5Js6O_D3BA/Y489wybV9PI/AAAAAAAAAbc/BSL76cY9M4Q5iUoknCxl3C0cXky2sbOxwCNcBGAsYHQ/s1600/1670331840644721-0.png);
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            height: 80vw;
+            width: 80vw;
+            margin: auto;
+            /* border: 1px solid black; */
+            box-shadow: 0 0 8px grey;
+        }
+
+        .parrent .qris .container-qris .qris-close {
+            position: absolute;
+            border: 2px solid whitesmoke;
+            text-align: center;
+            border-radius: 15px;
+            width: 10%;
+            top: -10px;
+            right: -18px;
+            background-color: red;
+            color: white;
+            font-weight: 600;
+            padding: 2px;
+        }
+
+        .parrent .qris .container-qris .popup-qris-title {}
+
+        .parrent .qris .container-qris .popup-qris-title p {
+            text-align: center;
+            background-color: var(--pr);
+            border-radius: 8px;
+            color: white;
+            width: 80%;
+            margin: 20px auto 0;
+        }
+
+        .parrent .table-produk {
+            /* border: 1px solid blue; */
+            display: flex;
+            justify-content: center;
+        }
+
+        .parrent .table-produk table {
+            margin: 0 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px grey;
+            /* border: 3px solid blue; */
+        }
+
+        .parrent .table-produk table tr th {
+            background-color: var(--pr);
+            /* border: 1px solid black; */
+            border-radius: 20px;
+            text-transform: uppercase;
+            color: white;
+            box-shadow: 0px 0px 2px grey;
+        }
+
+        .parrent .table-produk table tr td {
+            width: 110px;
+            height: 100px
+        }
+
+        /* produk start */
+        .parrent .table-produk table tr td .container .wrapper .card .images {
+            background-color: #ebebeb;
+            width: 66px;
+            height: 66px;
+            border-radius: 20%;
+            margin: auto;
+            box-shadow: 0 0 4px grey;
+        }
+
+        .parrent .table-produk table tr td .container .wrapper .card .nama_produk p {
+            text-align: center;
+            margin: 5px 0 0;
+            font-size: 13px;
+            color: black;
+            font-weight: 500;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        /* produk end */
+        /* menu table end */
+
+        /* popup pulsa nasional start */
+        .parrent .popup-pulsa-nasional,
+        .parrent .popup-paket-internet,
+        .parrent .popup-topup-games,
+        .parrent .popup-topup-ewallet,
+        .parrent .popup-listrik-pln,
+        .parrent .popup-voucher,
+        .parrent .popup-paket-telpon,
+        .parrent .popup-paket-sms {
+            position: absolute;
+            left: -100%;
+            background-color: #f0f0f0;
+            height: -100%;
+            width: 90vw;
+            border-radius: 20px;
+            /* border: 1px solid blue; */
+            transition: 0.1s;
+            box-shadow: 0 0 5px grey;
+        }
+
+        .parrent .popup-pulsa-nasional.active,
+        .parrent .popup-paket-internet.active,
+        .parrent .popup-topup-games.active,
+        .parrent .popup-topup-ewallet.active,
+        .parrent .popup-listrik-pln.active,
+        .parrent .popup-voucher.active,
+        .parrent .popup-paket-telpon.active,
+        .parrent .popup-paket-sms.active {
             left: 0;
+            margin: 5px 25px;
+            transition: 0.2s;
+            margin-bottom: 15rem;
+        }
+
+        /* popup pulsa nasional end */
+
+        .parrent .popup-pulsa-nasional .container-popup-pulsa-nasioanl,
+        .parrent .popup-paket-internet .container-popup-paket-internet,
+        .parrent .popup-topup-games .container-popup-topup-games .title,
+        .parrent .popup-topup-ewallet .container-popup-topup-ewallet,
+        .parrent .popup-listrik-pln .container-popup-listrik-pln,
+        .parrent .popup-voucher .container-popup-voucher,
+        .parrent .popup-paket-telpon .container-popup-paket-telpon,
+        .parrent .popup-paket-sms .container-popup-paket-sms {
+            /* border: 1px solid black; */
+            position: relative;
+        }
+
+        /* popup header start */
+        .parrent .popup-pulsa-nasional .container-popup-pulsa-nasioanl .title,
+        .parrent .popup-paket-internet .container-popup-paket-internet .title,
+        .parrent .popup-topup-games .container-popup-topup-games .title,
+        .parrent .popup-topup-ewallet .container-popup-topup-ewallet .title,
+        .parrent .popup-listrik-pln .container-popup-listrik-pln .title,
+        .parrent .popup-voucher .container-popup-voucher .title,
+        .parrent .popup-paket-telpon .container-popup-paket-telpon .title,
+        .parrent .popup-paket-sms .container-popup-paket-sms .title {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--pr);
+            border-radius: 30px;
+            height: 25px;
+            margin: 8px 5px 0;
+            /* border-top-left-radius: 30px;
+            border-top-right-radius: 30px; */
+        }
+
+        .parrent .popup-pulsa-nasional .container-popup-pulsa-nasioanl .title .close,
+        .parrent .popup-paket-internet .container-popup-paket-internet .title .close,
+        .parrent .popup-topup-games .container-popup-topup-games .title .close,
+        .parrent .popup-topup-ewallet .container-popup-topup-ewallet .title .close,
+        .parrent .popup-listrik-pln .container-popup-listrik-pln .title .close,
+        .parrent .popup-voucher .container-popup-voucher .title .close,
+        .parrent .popup-paket-telpon .container-popup-paket-telpon .title .close,
+        .parrent .popup-paket-sms .container-popup-paket-sms .title .close {
+            position: absolute;
+            right: 0px;
+            /* background-color: red; */
+            border-radius: 0px;
+            height: 30px;
+            width: 30px;
+            background-position: center;
+            background-size: cover;
+            background-image: url(https://i.ibb.co/N1FSGbd/20240409-211739.png);
+        }
+
+        /* popup header end */
+
+        /* popup produk pulsa nasional start */
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk,
+        .parrent .popup-paket-internet .paket-internet-produk,
+        .parrent .popup-topup-games .topup-games-produk,
+        .parrent .popup-topup-ewallet .topup-ewallet-produk,
+        .parrent .popup-listrik-pln .listrik-pln-produk,
+        .parrent .popup-voucher .voucher-produk,
+        .parrent .popup-paket-telpon .paket-telpon-produk,
+        .parrent .popup-paket-sms .paket-sms-produk {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-wrap: wrap;
+            max-width: 80%;
+            height: 80%;
+            margin: auto;
+            gap: 20px;
+            padding: 15px 0;
+            /* border: 1px solid black; */
+        }
+
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .telkomsel .wrapper .card .images,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .xl-axiata .wrapper .card .images,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .axis .wrapper .card .images,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .indosat .wrapper .card .images,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .tri .wrapper .card .images,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .byu .wrapper .card .images,
+
+        .parrent .popup-paket-internet .paket-internet-produk .telkomsel .wrapper .card .images,
+        .parrent .popup-paket-internet .paket-internet-produk .xl-axiata .wrapper .card .images,
+        .parrent .popup-paket-internet .paket-internet-produk .axis .wrapper .card .images,
+        .parrent .popup-paket-internet .paket-internet-produk .indosat .wrapper .card .images,
+        .parrent .popup-paket-internet .paket-internet-produk .tri .wrapper .card .images,
+        .parrent .popup-paket-internet .paket-internet-produk .byu .wrapper .card .images,
+
+        .parrent .popup-topup-games .topup-games-produk .mlbb .wrapper .card .images,
+        .parrent .popup-topup-games .topup-games-produk .ff .wrapper .card .images,
+        .parrent .popup-topup-games .topup-games-produk .pubgm .wrapper .card .images,
+        .parrent .popup-topup-games .topup-games-produk .codm .wrapper .card .images,
+
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .telkomsel .wrapper .card .images,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .xl-axiata .wrapper .card .images,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .axis .wrapper .card .images,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .indosat .wrapper .card .images,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .tri .wrapper .card .images,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .byu .wrapper .card .images,
+
+        .parrent .popup-paket-internet .paket-internet-produk .telkomsel .wrapper .card .images,
+        .parrent .popup-paket-internet .paket-internet-produk .xl-axiata .wrapper .card .images,
+        .parrent .popup-paket-internet .paket-internet-produk .axis .wrapper .card .images,
+        .parrent .popup-paket-internet .paket-internet-produk .indosat .wrapper .card .images,
+        .parrent .popup-paket-internet .paket-internet-produk .tri .wrapper .card .images,
+        .parrent .popup-paket-internet .paket-internet-produk .byu .wrapper .card .images,
+
+        .parrent .popup-topup-games .topup-games-produk .mlbb .wrapper .card .images,
+        .parrent .popup-topup-games .topup-games-produk .ff .wrapper .card .images,
+        .parrent .popup-topup-games .topup-games-produk .pubgm .wrapper .card .images,
+        .parrent .popup-topup-games .topup-games-produk .codm .wrapper .card .images,
+
+        .parrent .popup-topup-ewallet .topup-ewallet-produk .dana .wrapper .card .images,
+        .parrent .popup-topup-ewallet .topup-ewallet-produk .shopeepay .wrapper .card .images,
+        .parrent .popup-topup-ewallet .topup-ewallet-produk .gopay .wrapper .card .images,
+        .parrent .popup-topup-ewallet .topup-ewallet-produk .ovo .wrapper .card .images,
+
+        .parrent .popup-listrik-pln .listrik-pln-produk .tagihan-listrik .wrapper .card .images,
+        .parrent .popup-listrik-pln .listrik-pln-produk .token-listrik .wrapper .card .images,
+
+        .parrent .popup-voucher .voucher-produk .vgplay .wrapper .card .images,
+        .parrent .popup-voucher .voucher-produk .unipin .wrapper .card .images,
+        .parrent .popup-voucher .voucher-produk .gs .wrapper .card .images,
+
+        .parrent .popup-paket-telpon .paket-telpon-produk .telkomsel .wrapper .card .images,
+        .parrent .popup-paket-telpon .paket-telpon-produk .xl-axiata .wrapper .card .images,
+        .parrent .popup-paket-telpon .paket-telpon-produk .axis .wrapper .card .images,
+        .parrent .popup-paket-telpon .paket-telpon-produk .indosat .wrapper .card .images,
+        .parrent .popup-paket-telpon .paket-telpon-produk .tri .wrapper .card .images,
+
+        .parrent .popup-paket-sms .paket-sms-produk .telkomsel .wrapper .card .images,
+        .parrent .popup-paket-sms .paket-sms-produk .indosat .wrapper .card .images,
+        .parrent .popup-paket-sms .paket-sms-produk .tri .wrapper .card .images {
+            /* background-color: blue; */
+            width: 50px;
+            height: 50px;
+            border-radius: 20%;
+            margin: 5px auto;
+            box-shadow: 0 0 5px var(--pr);
+        }
+
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .telkomsel .wrapper .card .nama_produk p,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .xl-axiata .wrapper .card .nama_produk p,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .axis .wrapper .card .nama_produk p,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .indosat .wrapper .card .nama_produk p,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .tri .wrapper .card .nama_produk p,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .byu .wrapper .card .nama_produk p,
+
+        .parrent .popup-paket-internet .paket-internet-produk .telkomsel .wrapper .card .nama_produk p,
+        .parrent .popup-paket-internet .paket-internet-produk .xl-axiata .wrapper .card .nama_produk p,
+        .parrent .popup-paket-internet .paket-internet-produk .axis .wrapper .card .nama_produk p,
+        .parrent .popup-paket-internet .paket-internet-produk .indosat .wrapper .card .nama_produk p,
+        .parrent .popup-paket-internet .paket-internet-produk .tri .wrapper .card .nama_produk p,
+        .parrent .popup-paket-internet .paket-internet-produk .byu .wrapper .card .nama_produk p,
+
+        .parrent .popup-topup-games .topup-games-produk .mlbb .wrapper .card .nama_produk p,
+        .parrent .popup-topup-games .topup-games-produk .ff .wrapper .card .nama_produk p,
+        .parrent .popup-topup-games .topup-games-produk .pubgm .wrapper .card .nama_produk p,
+        .parrent .popup-topup-games .topup-games-produk .codm .wrapper .card .nama_produk p,
+
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .telkomsel .wrapper .card .nama_produk p,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .xl-axiata .wrapper .card .nama_produk p,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .axis .wrapper .card .nama_produk p,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .indosat .wrapper .card .nama_produk p,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .tri .wrapper .card .nama_produk p,
+        .parrent .popup-pulsa-nasional .pulsa-nasional-produk .byu .wrapper .card .nama_produk p,
+
+        .parrent .popup-paket-internet .paket-internet-produk .telkomsel .wrapper .card .nama_produk p,
+        .parrent .popup-paket-internet .paket-internet-produk .xl-axiata .wrapper .card .nama_produk p,
+        .parrent .popup-paket-internet .paket-internet-produk .axis .wrapper .card .nama_produk p,
+        .parrent .popup-paket-internet .paket-internet-produk .indosat .wrapper .card .nama_produk p,
+        .parrent .popup-paket-internet .paket-internet-produk .tri .wrapper .card .nama_produk p,
+        .parrent .popup-paket-internet .paket-internet-produk .byu .wrapper .card .nama_produk p,
+
+        .parrent .popup-topup-games .topup-games-produk .mlbb .wrapper .card .nama_produk p,
+        .parrent .popup-topup-games .topup-games-produk .ff .wrapper .card .nama_produk p,
+        .parrent .popup-topup-games .topup-games-produk .pubgm .wrapper .card .nama_produk p,
+        .parrent .popup-topup-games .topup-games-produk .codm .wrapper .card .nama_produk p,
+
+        .parrent .popup-topup-ewallet .topup-ewallet-produk .dana .wrapper .card .nama_produk p,
+        .parrent .popup-topup-ewallet .topup-ewallet-produk .shopeepay .wrapper .card .nama_produk p,
+        .parrent .popup-topup-ewallet .topup-ewallet-produk .gopay .wrapper .card .nama_produk p,
+        .parrent .popup-topup-ewallet .topup-ewallet-produk .ovo .wrapper .card .nama_produk p,
+
+        .parrent .popup-listrik-pln .listrik-pln-produk .tagihan-listrik .wrapper .card .nama_produk p,
+        .parrent .popup-listrik-pln .listrik-pln-produk .token-listrik .wrapper .card .nama_produk p,
+
+        .parrent .popup-voucher .voucher-produk .vgplay .wrapper .card .nama_produk p,
+        .parrent .popup-voucher .voucher-produk .unipin .wrapper .card .nama_produk p,
+        .parrent .popup-voucher .voucher-produk .gs .wrapper .card .nama_produk p,
+
+        .parrent .popup-paket-telpon .paket-telpon-produk .telkomsel .wrapper .card .nama_produk p,
+        .parrent .popup-paket-telpon .paket-telpon-produk .xl-axiata .wrapper .card .nama_produk p,
+        .parrent .popup-paket-telpon .paket-telpon-produk .axis .wrapper .card .nama_produk p,
+        .parrent .popup-paket-telpon .paket-telpon-produk .indosat .wrapper .card .nama_produk p,
+        .parrent .popup-paket-telpon .paket-telpon-produk .tri .wrapper .card .nama_produk p,
+
+        .parrent .popup-paket-sms .paket-sms-produk .telkomsel .wrapper .card .nama_produk p,
+        .parrent .popup-paket-sms .paket-sms-produk .indosat .wrapper .card .nama_produk p,
+        .parrent .popup-paket-sms .paket-sms-produk .tri .wrapper .card .nama_produk p {
+            text-align: center;
+            margin: 5px 0 0;
+            font-size: 13px;
+            color: black;
+            font-weight: 500;
+        }
+
+        /* .produk_populer {
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+           
+        }
+
+        .produk_populer .image_card {
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            width: 150px;
+            height: 200px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .produk_populer .image_card .cta {
             width: 100%;
-            height: 100%;
-            border: none;
+            text-align: center;
+            background-color: green;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        } */
+
+
+
+        .table-produk-ssh-menu {
+            /* border: 1px solid blue; */
+            display: flex;
+            justify-content: center;
+        }
+
+        .table-produk-ssh-menu table {
+            margin: 0px 15px 2px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px grey;
+            /* border: 3px solid blue; */
+        }
+
+        .table-produk-ssh-menu table tr th {
+            background-color: var(--pr);
+            /* border: 1px solid black; */
+            border-radius: 20px;
+            text-transform: uppercase;
+            color: white;
+            box-shadow: 0px 0px 2px grey;
+        }
+
+        .table-produk-ssh-menu table tr td {
+            width: 110px;
+            height: 100px
+        }
+
+        /* produk start */
+        .table-produk-ssh-menu table tr td .container .wrapper .card .images {
+            background-color: rgb(51, 24, 124);
+            width: 66px;
+            height: 66px;
+            border-radius: 20%;
+            margin: auto;
+            box-shadow: 0 0 4px grey;
+        }
+
+        .table-produk-ssh-menu table tr td .container .wrapper .card .nama_produk-ssh-menu p {
+            text-align: center;
+            margin: 5px 0 0;
+            font-size: 13px;
+            color: black;
+            font-weight: 500;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        /* produk end */
+        /* menu table end */
+
+        /* popup pulsa nasional start */
+        .popup-pulsa-nasional-ssh-menu,
+        .popup-paket-internet-ssh-menu,
+        .popup-topup-games-ssh-menu,
+        .popup-topup-ewallet-ssh-menu {
+            position: absolute;
+            left: -100%;
+            background-color: white;
+            height: -100%;
+            width: 90vw;
+            border-radius: 20px;
+            /* border: 1px solid blue; */
+            transition: 0.1s;
+            box-shadow: 0 0 5px grey;
+            top: -300px;
+        }
+
+        .popup-pulsa-nasional-ssh-menu.active,
+        .popup-paket-internet-ssh-menu.active,
+        .popup-topup-games-ssh-menu.active,
+        .popup-topup-ewallet-ssh-menu.active {
+            position: relative;
+            left: 0;
+            margin: 5px 25px;
+            transition: 0.2s;
+            margin-bottom: -15rem;
+            top: -300px;
+        }
+
+        /* popup pulsa nasional end */
+
+        .popup-pulsa-nasional-ssh-menu .container-popup-pulsa-nasioanl-ssh-menu,
+        .popup-paket-internet-ssh-menu .container-popup-paket-internet-ssh-menu,
+        .popup-topup-games-ssh-menu .container-popup-topup-games-ssh-menu .title,
+        .popup-topup-ewallet-ssh-menu .container-popup-topup-ewallet-ssh-menu,
+        .popup-listrik-pln .container-popup-listrik-pln,
+        .popup-voucher .container-popup-voucher,
+        .popup-paket-telpon .container-popup-paket-telpon,
+        .popup-paket-sms .container-popup-paket-sms {
+            /* border: 1px solid black; */
+            position: relative;
+            color: rgb(0, 0, 0);
+        }
+
+        /* popup header start */
+        .popup-pulsa-nasional-ssh-menu .container-popup-pulsa-nasioanl-ssh-menu .title,
+        .popup-paket-internet-ssh-menu .container-popup-paket-internet-ssh-menu .title,
+        .popup-topup-games-ssh-menu .container-popup-topup-games-ssh-menu .title,
+        .popup-topup-ewallet-ssh-menu .container-popup-topup-ewallet-ssh-menu .title,
+        .popup-listrik-pln .container-popup-listrik-pln .title,
+        .popup-voucher .container-popup-voucher .title,
+        .popup-paket-telpon .container-popup-paket-telpon .title,
+        .popup-paket-sms .container-popup-paket-sms .title {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--pr);
+            border-radius: 30px;
+            height: 25px;
+            margin: 8px 5px 0;
+            /* border-top-left-radius: 30px;
+            border-top-right-radius: 30px; */
+        }
+
+        .popup-pulsa-nasional-ssh-menu .container-popup-pulsa-nasioanl-ssh-menu .title .close,
+        .popup-paket-internet-ssh-menu .container-popup-paket-internet-ssh-menu .title .close,
+        .popup-topup-games-ssh-menu .container-popup-topup-games-ssh-menu .title .close,
+        .popup-topup-ewallet-ssh-menu .container-popup-topup-ewallet-ssh-menu .title .close,
+        .popup-listrik-pln .container-popup-listrik-pln .title .close,
+        .popup-voucher .container-popup-voucher .title .close,
+        .popup-paket-telpon .container-popup-paket-telpon .title .close,
+        .popup-paket-sms .container-popup-paket-sms .title .close {
+            position: absolute;
+            right: 4px;
+            /* background-color: red; */
+            border-radius: 0px;
+            height: 30px;
+            width: 30px;
+            background-position: center;
+            background-size: cover;
+            background-image: url(https://i.ibb.co/N1FSGbd/20240409-211739.png);
+        }
+
+        /* popup header end */
+
+        /* popup produk pulsa nasional start */
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk,
+        .popup-paket-internet-ssh-menu .paket-internet-produk,
+        .popup-topup-games-ssh-menu .topup-games-produk,
+        .popup-topup-ewallet-ssh-menu .topup-ewallet-produk,
+        .popup-listrik-pln .listrik-pln-produk,
+        .popup-voucher .voucher-produk,
+        .popup-paket-telpon .paket-telpon-produk,
+        .popup-paket-sms .paket-sms-produk {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-wrap: wrap;
+            max-width: 80%;
+            height: 80%;
+            margin: auto;
+            gap: 20px;
+            padding: 15px 0;
+            /* border: 1px solid black; */
+        }
+
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .telkomsel .wrapper .card .images,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .xl-axiata .wrapper .card .images,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .axis .wrapper .card .images,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .indosat .wrapper .card .images,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .tri .wrapper .card .images,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .byu .wrapper .card .images,
+
+        .popup-paket-internet-ssh-menu .paket-internet-produk .telkomsel .wrapper .card .images,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .xl-axiata .wrapper .card .images,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .axis .wrapper .card .images,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .indosat .wrapper .card .images,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .tri .wrapper .card .images,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .byu .wrapper .card .images,
+
+        .popup-topup-games-ssh-menu .topup-games-produk .mlbb .wrapper .card .images,
+        .popup-topup-games-ssh-menu .topup-games-produk .ff .wrapper .card .images,
+        .popup-topup-games-ssh-menu .topup-games-produk .pubgm .wrapper .card .images,
+        .popup-topup-games-ssh-menu .topup-games-produk .codm .wrapper .card .images,
+
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .telkomsel .wrapper .card .images,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .xl-axiata .wrapper .card .images,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .axis .wrapper .card .images,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .indosat .wrapper .card .images,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .tri .wrapper .card .images,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .byu .wrapper .card .images,
+
+        .popup-paket-internet-ssh-menu .paket-internet-produk .telkomsel .wrapper .card .images,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .xl-axiata .wrapper .card .images,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .axis .wrapper .card .images,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .indosat .wrapper .card .images,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .tri .wrapper .card .images,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .byu .wrapper .card .images,
+
+        .popup-topup-games-ssh-menu .topup-games-produk .mlbb .wrapper .card .images,
+        .popup-topup-games-ssh-menu .topup-games-produk .ff .wrapper .card .images,
+        .popup-topup-games-ssh-menu .topup-games-produk .pubgm .wrapper .card .images,
+        .popup-topup-games-ssh-menu .topup-games-produk .codm .wrapper .card .images,
+
+        .popup-topup-ewallet-ssh-menu .topup-ewallet-produk .dana .wrapper .card .images,
+        .popup-topup-ewallet-ssh-menu .topup-ewallet-produk .shopeepay .wrapper .card .images,
+        .popup-topup-ewallet-ssh-menu .topup-ewallet-produk .gopay .wrapper .card .images,
+        .popup-topup-ewallet-ssh-menu .topup-ewallet-produk .ovo .wrapper .card .images,
+
+        .popup-listrik-pln .listrik-pln-produk .tagihan-listrik .wrapper .card .images,
+        .popup-listrik-pln .listrik-pln-produk .token-listrik .wrapper .card .images,
+
+        .popup-voucher .voucher-produk .vgplay .wrapper .card .images,
+        .popup-voucher .voucher-produk .unipin .wrapper .card .images,
+        .popup-voucher .voucher-produk .gs .wrapper .card .images,
+
+        .popup-paket-telpon .paket-telpon-produk .telkomsel .wrapper .card .images,
+        .popup-paket-telpon .paket-telpon-produk .xl-axiata .wrapper .card .images,
+        .popup-paket-telpon .paket-telpon-produk .axis .wrapper .card .images,
+        .popup-paket-telpon .paket-telpon-produk .indosat .wrapper .card .images,
+        .popup-paket-telpon .paket-telpon-produk .tri .wrapper .card .images,
+
+        .popup-paket-sms .paket-sms-produk .telkomsel .wrapper .card .images,
+        .popup-paket-sms .paket-sms-produk .indosat .wrapper .card .images,
+        .popup-paket-sms .paket-sms-produk .tri .wrapper .card .images {
+            /* background-color: blue; */
+            width: 50px;
+            height: 50px;
+            border-radius: 20%;
+            margin: 5px auto;
+            box-shadow: 0 0 5px var(--pr);
+        }
+
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .telkomsel .wrapper .card .nama_produk-ssh-menu p,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .xl-axiata .wrapper .card .nama_produk-ssh-menu p,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .axis .wrapper .card .nama_produk-ssh-menu p,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .indosat .wrapper .card .nama_produk-ssh-menu p,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .tri .wrapper .card .nama_produk-ssh-menu p,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .byu .wrapper .card .nama_produk-ssh-menu p,
+
+        .popup-paket-internet-ssh-menu .paket-internet-produk .telkomsel .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .xl-axiata .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .axis .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .indosat .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .tri .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .byu .wrapper .card .nama_produk-ssh-menu p,
+
+        .popup-topup-games-ssh-menu .topup-games-produk .mlbb .wrapper .card .nama_produk-ssh-menu p,
+        .popup-topup-games-ssh-menu .topup-games-produk .ff .wrapper .card .nama_produk-ssh-menu p,
+        .popup-topup-games-ssh-menu .topup-games-produk .pubgm .wrapper .card .nama_produk-ssh-menu p,
+        .popup-topup-games-ssh-menu .topup-games-produk .codm .wrapper .card .nama_produk-ssh-menu p,
+
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .telkomsel .wrapper .card .nama_produk-ssh-menu p,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .xl-axiata .wrapper .card .nama_produk-ssh-menu p,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .axis .wrapper .card .nama_produk-ssh-menu p,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .indosat .wrapper .card .nama_produk-ssh-menu p,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .tri .wrapper .card .nama_produk-ssh-menu p,
+        .popup-pulsa-nasional-ssh-menu .pulsa-nasional-produk .byu .wrapper .card .nama_produk-ssh-menu p,
+
+        .popup-paket-internet-ssh-menu .paket-internet-produk .telkomsel .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .xl-axiata .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .axis .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .indosat .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .tri .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-internet-ssh-menu .paket-internet-produk .byu .wrapper .card .nama_produk-ssh-menu p,
+
+        .popup-topup-games-ssh-menu .topup-games-produk .mlbb .wrapper .card .nama_produk-ssh-menu p,
+        .popup-topup-games-ssh-menu .topup-games-produk .ff .wrapper .card .nama_produk-ssh-menu p,
+        .popup-topup-games-ssh-menu .topup-games-produk .pubgm .wrapper .card .nama_produk-ssh-menu p,
+        .popup-topup-games-ssh-menu .topup-games-produk .codm .wrapper .card .nama_produk-ssh-menu p,
+
+        .popup-topup-ewallet-ssh-menu .topup-ewallet-produk .dana .wrapper .card .nama_produk-ssh-menu p,
+        .popup-topup-ewallet-ssh-menu .topup-ewallet-produk .shopeepay .wrapper .card .nama_produk-ssh-menu p,
+        .popup-topup-ewallet-ssh-menu .topup-ewallet-produk .gopay .wrapper .card .nama_produk-ssh-menu p,
+        .popup-topup-ewallet-ssh-menu .topup-ewallet-produk .ovo .wrapper .card .nama_produk-ssh-menu p,
+
+        .popup-listrik-pln .listrik-pln-produk .tagihan-listrik .wrapper .card .nama_produk-ssh-menu p,
+        .popup-listrik-pln .listrik-pln-produk .token-listrik .wrapper .card .nama_produk-ssh-menu p,
+
+        .popup-voucher .voucher-produk .vgplay .wrapper .card .nama_produk-ssh-menu p,
+        .popup-voucher .voucher-produk .unipin .wrapper .card .nama_produk-ssh-menu p,
+        .popup-voucher .voucher-produk .gs .wrapper .card .nama_produk-ssh-menu p,
+
+        .popup-paket-telpon .paket-telpon-produk .telkomsel .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-telpon .paket-telpon-produk .xl-axiata .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-telpon .paket-telpon-produk .axis .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-telpon .paket-telpon-produk .indosat .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-telpon .paket-telpon-produk .tri .wrapper .card .nama_produk-ssh-menu p,
+
+        .popup-paket-sms .paket-sms-produk .telkomsel .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-sms .paket-sms-produk .indosat .wrapper .card .nama_produk-ssh-menu p,
+        .popup-paket-sms .paket-sms-produk .tri .wrapper .card .nama_produk-ssh-menu p {
+            text-align: center;
+            margin: 5px 0 0;
+            font-size: 13px;
+            color: black;
+            font-weight: 500;
         }
     </style>
 </head>
+
 <body>
-    <iframe src="https://amranyeha.github.io/"></iframe>
+    <script>
+        // data start
+        // header start
+        var header_menu1 = "history";
+        var header_menu2 = "voucher";
+        var header_menu3 = "cs";
+        // header end
+
+        // table produk start
+        // table head start
+        var table_head = "produk digital otomatis";
+        // table head end
+
+        // menu produk start
+        var produk_menu1 = "pulsa nasional";
+        var produk_menu2 = "paket internet";
+        var produk_menu3 = "topup games";
+        var produk_menu4 = "topup ewallet";
+        var produk_menu5 = "produk Lainnya";
+        var produk_menu6 = "voucher";
+        var produk_menu7 = "paket telpon";
+        var produk_menu8 = "paket sms";
+        // menu produk end
+
+        // table produk end
+
+        // table produk manual start 
+        // table head start
+        var table1_head = "produk digital manual";
+        // table head end
+
+        var produk1_menu1 = "game eksklusif";
+        var produk1_menu2 = "streaming plus";
+        var produk1_menu3 = "safe tunnel";
+        var produk1_menu4 = "dompet plus";
+        // var produk1_menu5 = "token pln";
+        // var produk1_menu6 = "voucher";
+        // var produk1_menu7 = "paket telpon";
+        // var produk1_menu8 = "paket sms";
+        // table produk manual end
+
+        // table produk manual start 
+        // table head start
+        var table2_head = "ssh & vpn premium manual";
+        // table head end
+
+        var produk2_menu1 = "ssh premium";
+        var produk2_menu2 = "trojan premium";
+        var produk2_menu3 = "vmess premium";
+        var produk2_menu4 = "vless premium";
+        // var produk1_menu5 = "token pln";
+        // var produk1_menu6 = "voucher";
+        // var produk1_menu7 = "paket telpon";
+        // var produk1_menu8 = "paket sms";
+        // table produk manual end
+
+        // popup start
+        // popup pulsa nasional start
+        // header popup start
+        var popup_header_produk1 = "pilh provider";
+        // header popup end
+
+        // menu popup start
+        var popup_produk1_menu1 = "telkomsel";
+        var popup_produk1_menu2 = "xl";
+        var popup_produk1_menu3 = "axis";
+        var popup_produk1_menu4 = "indosat";
+        var popup_produk1_menu5 = "tri";
+        var popup_produk1_menu6 = "byu";
+        var popup_produk1_menu7 = "smartfren";
+        // menu popup end
+
+        // // link href produk 1 start
+        // var href_produk1_menu1 = "https://fanpaystore.bukaolshop.site/kategori/tsel-pulsa-140830"; 
+        // var href_produk1_menu2 = ""; 
+        // var href_produk1_menu3 = ""; 
+        // var href_produk1_menu4 = ""; 
+        // var href_produk1_menu5 = ""; 
+        // var href_produk1_menu6 = ""; 
+        // // link href produk 1 end
+        // popup pulsa nasional end
+
+        // popup paket internet start
+        // header popup start
+        var popup_header_produk2 = "pilh provider";
+        // header popup end
+
+        // menu popup start
+        var popup_produk2_menu1 = "telkomsel";
+        var popup_produk2_menu2 = "xl";
+        var popup_produk2_menu3 = "axis";
+        var popup_produk2_menu4 = "indosat";
+        var popup_produk2_menu5 = "tri";
+        var popup_produk2_menu6 = "byu";
+        var popup_produk2_menu7 = "smartfren";
+        // menu popup end
+        // popup paket internet end
+
+        // popup topup games start
+        // header popup start
+        var popup_header_produk3 = "pilh games";
+        // header popup end
+
+        // menu popup start
+        var popup_produk3_menu1 = "mobile legends";
+        var popup_produk3_menu2 = "free fire";
+        var popup_produk3_menu3 = "pubg mobile";
+        var popup_produk3_menu4 = "cod mobile";
+        var popup_produk3_menu5 = "arena of valor";
+        // menu popup end
+        // popup topup games end
+
+        // popup topup ewallet start
+        // header popup start
+        var popup_header_produk4 = "pilh e-money";
+        // header popup end
+
+        // menu popup start
+        var popup_produk4_menu1 = "dana";
+        var popup_produk4_menu2 = "shopee pay";
+        var popup_produk4_menu3 = "gopay";
+        var popup_produk4_menu4 = "ovo";
+        var popup_produk4_menu5 = "link aja";
+        // menu popup start
+        // popup topup ewallet end
+
+        // popup listrik pln start
+        // header popup start
+        var popup_header_produk5 = "pilh tagihan";
+        // header popup end
+
+        // menu popup start
+        var popup_produk5_menu1 = "tagihan listrik";
+        var popup_produk5_menu2 = "token listrik";
+        // menu popup end
+        // popup listrik pln end
+
+        // popup voucher start
+        // header popup start
+        var popup_header_produk6 = "pilh voucher";
+        // header popup end
+
+        // menu popup start
+        var popup_produk6_menu1 = "play card";
+        var popup_produk6_menu2 = "unipin";
+        var popup_produk6_menu3 = "garena shell";
+        // menu popup start
+        // popup voucher end
+
+        // popup paket telpon start
+        // header popup start
+        var popup_header_produk7 = "pilh provider";
+        // header popup end
+
+        // menu popup start
+        var popup_produk7_menu1 = "telkomsel";
+        var popup_produk7_menu2 = "xl";
+        var popup_produk7_menu3 = "axis";
+        var popup_produk7_menu4 = "indosat";
+        var popup_produk7_menu5 = "tri"
+        // menu popup end
+        // popup paket telpon end
+
+        // popup paket sms start
+        // header popup start
+        var popup_header_produk8 = "pilh provider";
+        // header popup end
+
+        // menu popup start
+        var popup_produk8_menu1 = "telkomsel";
+        var popup_produk8_menu2 = "indosat";
+        var popup_produk8_menu3 = "tri";
+        // menu popup end
+        // popup paket sms end
+
+        // popup end
+        // data end
+
+        // data start
+
+
+        // table produk start
+        // table head start
+        var table_head_ssh_menu = "ssh & vpn indonesia";
+        // table head end
+
+
+        // table produk end
+
+
+
+        // table produk manual start 
+        // table head start
+        var table2_head_ssh_menu = "ssh & vpn premium manual";
+        // table head end
+
+        var produk2_menu1_ssh_menu = "ssh & ovpn id";
+        var produk2_menu2_ssh_menu = "trojan id";
+        var produk2_menu3_ssh_menu = "vmess id";
+        var produk2_menu4_ssh_menu = "vless id";
+        // var produk1_menu5 = "token pln";
+        // var produk1_menu6 = "voucher";
+        // var produk1_menu7 = "paket telpon";
+        // var produk1_menu8 = "paket sms";
+        // table produk manual end
+
+        // popup start
+        // popup pulsa nasional start
+        // header popup start
+        var popup_header_produk1_ssh_menu = "pilh jangka panjang ssh & ovpn";
+        // header popup end
+
+        // menu popup start
+        var popup_produk1_menu1_ssh_menu = "7 hari";
+        var popup_produk1_menu2_ssh_menu = "14 hari";
+        var popup_produk1_menu3_ssh_menu = "30 hari";
+        // menu popup end
+
+        // // link href produk 1 start
+        // var href_produk1_menu1 = "https://fanpaystore.bukaolshop.site/kategori/tsel-pulsa-140830"; 
+        // var href_produk1_menu2 = ""; 
+        // var href_produk1_menu3 = ""; 
+        // var href_produk1_menu4 = ""; 
+        // var href_produk1_menu5 = ""; 
+        // var href_produk1_menu6 = ""; 
+        // // link href produk 1 end
+        // popup pulsa nasional end
+
+        // popup paket internet start
+        // header popup start
+        var popup_header_produk2_ssh_menu = "pilh jangka panjang trojan id";
+        // header popup end
+
+        // menu popup start
+        var popup_produk2_menu1_ssh_menu = "7 hari";
+        var popup_produk2_menu2_ssh_menu = "14 hari";
+        var popup_produk2_menu3_ssh_menu = "30 hari";
+
+        // menu popup end
+        // popup paket internet end
+
+        // popup topup games start
+        // header popup start
+        var popup_header_produk3_ssh_menu = "pilh jangka panjang vmess id";
+        // header popup end
+
+        // menu popup start
+        var popup_produk3_menu1_ssh_menu = "7 hari";
+        var popup_produk3_menu2_ssh_menu = "14 hari";
+        var popup_produk3_menu3_ssh_menu = "30 hari";
+
+        // menu popup end
+        // popup topup games end
+
+        // popup topup ewallet start
+        // header popup start
+        var popup_header_produk4_ssh_menu = "pilh jangka panjang vless id";
+        // header popup end
+
+        // menu popup start
+        var popup_produk4_menu1_ssh_menu = "7 hari";
+        var popup_produk4_menu2_ssh_menu = "14 hari";
+        var popup_produk4_menu3_ssh_menu = "30 hari";
+
+        // menu popup start
+        // popup topup ewallet end
+
+        // popup end
+        // data end
+    </script>
+    <div class="parrent">
+        <div class="header">
+            <div class="wrapper_header">
+                <a href="https://fanpaystore.olshopku.com/digital/319595">
+                    <div class="header-menu1">
+                        <div class="image_qris_manual"
+                            style="background-image: url(https://blogger.googleusercontent.com/img/a/AVvXsEhukvioP6hQG1QQIy7RlNf0tMA2Xknm8cCBQNeiiL8hxJTWgSq6FYY2uBIoukSjuHkXri8VNWVM-P4bp5ZZ2C56DvGfj6AsChE1J220qLafAMtVGwOwFekqKy23hGUqgCQp65ubzNt3SHhaEB1xACw1s16SVQZ70AyQxKwHIzy94d48qOMnDEda_U5yr2I);">
+                            <!-- image qris -->
+                        </div>
+                        <div class="title_qris_manual">
+                            <p>
+                                <script>document.write(header_menu1);</script>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/pages?voucher">
+                    <div class="header-menu2" id="qris">
+                        <div class="image_qris_otomatis"
+                            style="background-image: url(https://blogger.googleusercontent.com/img/a/AVvXsEjeIcCQ9ax8Z7mJPCdRwlowlrybra99IRcHugHtQNvc5-zviSfh0KN1rTyLWLLYjx1b1G9zBAOeEqFANSl-zDQyzaPbVrXl-NPVkZHeZuMsfg7yggmeAVIM1oZ1ZAGs9pvwOyAcyCW3JQDzp1glVDOEuTHWCucgacPZENLkFpWMjPe0uzIy43R7qN1lVHI);">
+                            <!-- image qris -->
+                        </div>
+                        <div class="title_qris_otomatis">
+                            <p>
+                                <script>document.write(header_menu2)</script>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/pages?kontak">
+                    <div class="header-menu3">
+                        <div class="image_keluhan"
+                            style="background-image: url(https://blogger.googleusercontent.com/img/a/AVvXsEgT4w3t68suWeClSKpkykTdtLSSseGdK3pagJytji19kOxyqEx-M8yFfFV1eyUfqGBWOf4KqGXBBZGk9m-Nm7VwJU-tW1RjAqZArvqOPeAWDpxs-9IIYIGv6WuwGhLLJaAtuAJYrd3boiIXRqAYrx974q10ujKnYDv37rbmaH4xFvJ247iMNdijLj67wfE);">
+                            <!-- image keluhan -->
+                        </div>
+                        <div class="title_keluhan">
+                            <p>
+                                <script>document.write(header_menu3)</script>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="table-produk">
+            <table border="0">
+                <tr>
+                    <th colspan="4">
+                        <script>document.write(table_head);</script>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://fanpaystore.olshopku.com/digital/14869">
+                            <div class="container" id="pulsa">
+                                <div class="wrapper">
+                                    <div class="card">
+                                        <div class="images"
+                                            style="background-image: var(--bg-menu1);document.write(produk_menu1[1])</script>; background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                            <!-- images -->
+                                        </div>
+                                        <div class="nama_produk">
+                                            <p>
+                                                <script>document.write(produk_menu1);</script>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://fanpaystore.olshopku.com/digital/161109">
+                            <div class="container" id="paket-internet">
+                                <div class="wrapper">
+                                    <div class="card">
+                                        <div class="images"
+                                            style="background-image: var(--bg-menu2); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                            <!-- images -->
+                                        </div>
+                                        <div class="nama_produk">
+                                            <p>
+                                                <script>document.write(produk_menu2);</script>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <div class="container" id="topup-games">
+                                <div class="wrapper">
+                                    <div class="card">
+                                        <div class="images"
+                                            style="background-image: var(--bg-menu3); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+                                            <!-- images -->
+                                        </div>
+                                        <div class="nama_produk">
+                                            <p>
+                                                <script>document.write(produk_menu3);</script>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <div class="container" id="topup-ewallet">
+                                <div class="wrapper">
+                                    <div class="card">
+                                        <div class="images"
+                                            style="background-image: var(--bg-menu4); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                            <!-- images -->
+                                        </div>
+                                        <div class="nama_produk">
+                                            <p>
+                                                <script>document.write(produk_menu4);</script>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="#">
+                            <div class="container" id="paket-sms">
+                                <div class="wrapper">
+                                    <div class="card">
+                                        <div class="images"
+                                            style="background-image: var(--bg-menu8); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                            <!-- images -->
+                                        </div>
+                                        <div class="nama_produk">
+                                            <p>
+                                                <script>document.write(produk_menu8);</script>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <div class="container" id="paket-telpon">
+                                <div class="wrapper">
+                                    <div class="card">
+                                        <div class="images"
+                                            style="background-image: var(--bg-menu7); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                            <!-- images -->
+                                        </div>
+                                        <div class="nama_produk">
+                                            <p>
+                                                <script>document.write(produk_menu7);</script>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                    </td>
+                    <td>
+                        <div class="container" id="voucher">
+                            <div class="wrapper">
+                                <div class="card">
+                                    <div class="images"
+                                        style="background-image: var(--bg-menu6); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                        <!-- images -->
+                                    </div>
+                                    <div class="nama_produk">
+                                        <p>
+                                            <script>document.write(produk_menu6);</script>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://fanpaystore.olshopku.com/digital/331083rs">
+                            <div class="container" id="listrik-pln">
+                                <div class="wrapper">
+                                    <div class="card">
+                                        <div class="images"
+                                            style="background-image: var(--bg-menu5); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                            <!-- images -->
+                                        </div>
+                                        <div class="nama_produk">
+                                            <p>
+                                                <script>document.write(produk_menu5);</script>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <!-- header popup pulsa nasional start -->
+        <div class="popup-pulsa-nasional">
+            <div class="container-popup-pulsa-nasioanl">
+                <div class="title">
+                    <div class="produk-pulsa">
+                        <p>
+                            <script>document.write(popup_header_produk1);</script>
+                        </p>
+                    </div>
+
+                    <div class="close" id="close-pulsa-nasional">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <!-- header popup pulsa nasional end -->
+
+            <!-- isi popup produk pulsa nasional start  -->
+            <div class="pulsa-nasional-produk">
+                <a href="https://fanpaystore.bukaolshop.site/kategori/tsel-pulsa-140830">
+                    <div class="telkomsel">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk1_menu1); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk1_menu1);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/xl-pulsa-140719">
+                    <div class="xl-axiata">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk1_menu2); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk1_menu2);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/axis-pulsa-350449">
+                    <div class="axis">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk1_menu3); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk1_menu3);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/im3-pulsa-350447">
+                    <div class="indosat">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk1_menu4); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk1_menu4);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/tri-pulsa-140715">
+                    <div class="tri">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk1_menu5); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk1_menu5);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/byu-pulsa-350450">
+                    <div class="byu">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk1_menu6); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk1_menu6);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/smart-pulsa-350448">
+                    <div class="byu">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk1_menu7); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk1_menu7);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- isi popup produk pulsa nasional end  -->
+
+        <!-- header popup paket internet start -->
+        <div class="popup-paket-internet">
+            <div class="container-popup-paket-internet">
+                <div class="title">
+                    <div class="produk-paket-internet">
+                        <p>
+                            <script>document.write(popup_header_produk2);</script>
+                        </p>
+                    </div>
+
+                    <div class="close" id="close-paket-internet">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <!-- header popup paket internet end -->
+
+            <!-- isi popup produk paket internet start  -->
+            <div class="paket-internet-produk">
+                <a href="https://fanpaystore.bukaolshop.site/kategori/tsel-data-361063">
+                    <div class="telkomsel">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk2_menu1); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk2_menu1);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/xl-data-361062">
+                    <div class="xl-axiata">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk2_menu2); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk2_menu2);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/axis-data-361066">
+                    <div class="axis">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk2_menu3); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk2_menu3);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/im3-data-361064">
+                    <div class="indosat">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk2_menu4); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk2_menu4);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/tri-data-361061">
+                    <div class="tri">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk2_menu5); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk2_menu5);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/byu-pulsa-350450">
+                    <div class="byu">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk2_menu6); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk2_menu6);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/smart-data-361065">
+                    <div class="byu">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk2_menu7); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk2_menu7);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- header popup paket internet end -->
+
+        <!-- header popup top up games start -->
+        <div class="popup-topup-games">
+            <div class="container-popup-topup-games">
+                <div class="title">
+                    <div class="produk-topup-games">
+                        <p>
+                            <script>document.write(popup_header_produk3);</script>
+                        </p>
+                    </div>
+
+                    <div class="close" id="close-topup-games">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <!-- header popup topup games end -->
+
+            <!-- isi popup produk topup games start  -->
+            <div class="topup-games-produk">
+                <a href="https://fanpaystore.bukaolshop.site/kategori/mlbb-358482">
+                    <div class="mlbb">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk3_menu1); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk3_menu1);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/free-fire-62180">
+                    <div class="ff">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk3_menu2); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk3_menu2);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/pubg-358483">
+                    <div class="pubgm">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk3_menu3); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk3_menu3);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/codm-361929">
+                    <div class="codm">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk3_menu4); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk3_menu4);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/aov-469738">
+                    <div class="codm">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk3_menu5); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk3_menu5);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- header popup top up games end -->
+
+        <!-- header popup topup ewallet start -->
+        <div class="popup-topup-ewallet">
+            <div class="container-popup-topup-ewallet">
+                <div class="title">
+                    <div class="produk-topup-ewallet">
+                        <p>
+                            <script>document.write(popup_header_produk4);</script>
+                        </p>
+                    </div>
+
+                    <div class="close" id="close-topup-ewallet">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <!-- header popup topup-ewallet end -->
+
+            <!-- isi popup produk topup-ewallet start  -->
+            <div class="topup-ewallet-produk">
+                <a href="https://fanpaystore.bukaolshop.site/kategori/dana-359429">
+                    <div class="dana">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk4_menu1); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk4_menu1);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/shopeepay-tanpa-pot-359428">
+                    <div class="shopeepay">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk4_menu2); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk4_menu2);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/gopay-359430">
+                    <div class="gopay">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk4_menu3); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk4_menu3);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/ovo-tanpa-potongan-359431">
+                    <div class="ovo">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk4_menu4); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk4_menu4);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/link-aja-358426">
+                    <div class="ovo">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk4_menu5); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk4_menu5);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- header popup topup ewallet end -->
+
+        <!-- header popup listrik pln start -->
+        <div class="popup-listrik-pln">
+            <div class="container-popup-listrik-pln">
+                <div class="title">
+                    <div class="produk-listrik-pln">
+                        <p>
+                            <script>document.write(popup_header_produk5);</script>
+                        </p>
+                    </div>
+
+                    <div class="close" id="close-listrik-pln">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <!-- header popup listrik pln end -->
+
+            <!-- isi popup produk listrik pln start  -->
+            <div class="listrik-pln-produk">
+                <a href="https://fanpaystore.bukaolshop.site/produk/tagihan-listrik-1546290">
+                    <div class="tagihan-listrik">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk5_menu1); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk5_menu1);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/token-pln-470517">
+                    <div class="token-listrik">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk5_menu2); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk5_menu2);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- header popup listrik pln end -->
+
+        <!-- header popup voucher start -->
+        <div class="popup-voucher">
+            <div class="container-popup-voucher">
+                <div class="title">
+                    <div class="produk-voucher">
+                        <p>
+                            <script>document.write(popup_header_produk6);</script>
+                        </p>
+                    </div>
+
+                    <div class="close" id="close-voucher">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <!-- header popup voucher -->
+
+            <!-- isi popup produk voucher start  -->
+            <div class="voucher-produk">
+                <a href="https://fanpaystore.bukaolshop.site/kategori/v-gplay-361642">
+                    <div class="vgplay">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk6_menu1); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk6_menu1);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/unipin-469818">
+                    <div class="unipin">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk6_menu2); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk6_menu2);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/garena-shell-140486">
+                    <div class="gs">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk6_menu3); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk6_menu3);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- header popup voucher end -->
+
+        <!-- header popup paket telpon start -->
+        <div class="popup-paket-telpon">
+            <div class="container-popup-paket-telpon">
+                <div class="title">
+                    <div class="produk-paket-telpon">
+                        <p>
+                            <script>document.write(popup_header_produk7);</script>
+                        </p>
+                    </div>
+
+                    <div class="close" id="close-paket-telpon">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <!-- header popup voucher -->
+
+            <!-- isi popup produk voucher start  -->
+            <div class="paket-telpon-produk">
+                <a href="https://fanpaystore.bukaolshop.site/kategori/telp-tsel-bulk-murah-361846">
+                    <div class="telkomsel">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk7_menu1); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk7_menu1);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/telp-xl-biasa-361847">
+                    <div class="xl-axiata">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk7_menu2); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk7_menu2);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/telp-axis-361844">
+                    <div class="axis">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk7_menu3); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk7_menu3);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/telp-im3-361843">
+                    <div class="indosat">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk7_menu4); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk7_menu4);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/telp-tri-361845">
+                    <div class="tri">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk7_menu5); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk7_menu5);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- header popup paket telpon end -->
+
+        <!-- header popup paket sms start -->
+        <div class="popup-paket-sms">
+            <div class="container-popup-paket-sms">
+                <div class="title">
+                    <div class="produk-paket-sms">
+                        <p>
+                            <script>document.write(popup_header_produk8);</script>
+                        </p>
+                    </div>
+
+                    <div class="close" id="close-paket-sms">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <!-- header popup voucher -->
+
+            <!-- isi popup produk paket sms start  -->
+            <div class="paket-sms-produk">
+                <a href="https://fanpaystore.bukaolshop.site/kategori/sms-tsel-361858">
+                    <div class="telkomsel">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk8_menu1); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk8_menu1);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/sms-im3-361856">
+                    <div class="indosat">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk8_menu2); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk8_menu2);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://fanpaystore.bukaolshop.site/kategori/sms-tri-361857">
+                    <div class="tri">
+                        <div class="wrapper">
+                            <div class="card">
+                                <div class="images"
+                                    style="background-image: var(--popup_produk8_menu3); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <!-- images -->
+                                </div>
+                                <div class="nama_produk">
+                                    <p>
+                                        <script>document.write(popup_produk8_menu3);</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- header popup paket sms end -->
+
+        <br>
+        <div class="table-produk">
+            <table border="0">
+                <tr>
+                    <th colspan="4">
+                        <script>document.write(table1_head);</script>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <a
+                            href="https://wa.me/6285922260885?text=Halo%20Admin%2C%20Saya%20Ingin%20Info%20produk%20GEKAT">
+                            <div class="container" id="pulsa">
+                                <div class="wrapper">
+                                    <div class="card">
+                                        <div class="images"
+                                            style="background-image: var(--bg1-menu1);document.write(produk_menu1[1])</script>; background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                            <!-- images -->
+                                        </div>
+                                        <div class="nama_produk">
+                                            <p>
+                                                <script>document.write(produk1_menu1);</script>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a
+                            href="https://wa.me/6285922260885?text=Halo%20Admin%2C%20Saya%20Ingin%20Info%20produk%20AKAT">
+                            <div class="container" id="paket-internet">
+                                <div class="wrapper">
+                                    <div class="card">
+                                        <div class="images"
+                                            style="background-image: var(--bg1-menu2); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                            <!-- images -->
+                                        </div>
+                                        <div class="nama_produk">
+                                            <p>
+                                                <script>document.write(produk1_menu2);</script>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a
+                            href="https://wa.me/6285922260885?text=Halo%20Admin%2C%20Saya%20Ingin%20Info%20produk%20DPKAT">
+                            <div class="container" id="topup-games">
+                                <div class="wrapper">
+                                    <div class="card">
+                                        <div class="images"
+                                            style="background-image: var(--bg1-menu3); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                        </div>
+                                        <div class="nama_produk">
+                                            <p>
+                                                <script>document.write(produk1_menu3);</script>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a
+                            href="https://wa.me/6285922260885?text=Halo%20Admin%2C%20Saya%20Ingin%20Info%20produk%20STKAT">
+                            <div class="container" id="topup-ewallet">
+                                <div class="wrapper">
+                                    <div class="card">
+                                        <div class="images"
+                                            style="background-image: var(--bg1-menu4); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+                                        </div>
+                                        <div class="nama_produk">
+                                            <p>
+                                                <script>document.write(produk1_menu4);</script>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+
+
+
+
+        <!-- <div class="produk_populer">
+            <div class="image_card">
+
+                <div class="cta">
+                    beli sekarang
+                </div>
+            </div>
+
+            <div class="image_card">
+
+                <div class="cta">
+                    beli sekarang
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <script>
+        // popup produk start
+        // pulsa
+        // const popup_pulsa_nasional = document.querySelector('.popup-pulsa-nasional');
+        // document.querySelector('#pulsa').onclick = () => {
+        //     popup_pulsa_nasional.classList.toggle('active');
+        // }Uncomment jika ingin mengaktifkan popup pulsa
+        const pulsa = document.querySelector('#pulsa');
+        document.addEventListener('click', function (e) {
+            if (!popup_pulsa_nasional.contains(e.target) && !pulsa.contains(e.target)) {
+                popup_pulsa_nasional.classList.remove('active');
+            }
+        })
+        const close_pulsa_nasional = document.querySelector('.popup-pulsa-nasional');
+        document.querySelector('#close-pulsa-nasional').onclick = () => {
+            close_pulsa_nasional.classList.toggle('active');
+        }
+        //pulsa
+
+
+
+
+
+        // paket
+        // const popup_paket_internet = document.querySelector('.popup-paket-internet');
+        // document.querySelector('#paket-internet').onclick = () => {
+        //     popup_paket_internet.classList.toggle('active');
+        // }Uncomment jika ingin mengaktifkan popup paket
+        const paket_internet = document.querySelector('#paket-internet');
+        document.addEventListener('click', function (e) {
+            if (!popup_paket_internet.contains(e.target) && !paket_internet.contains(e.target)) {
+                popup_paket_internet.classList.remove('active');
+            }
+        })
+        const close_paket_internet = document.querySelector('.popup-paket-internet');
+        document.querySelector('#close-paket-internet').onclick = () => {
+            close_paket_internet.classList.toggle('active');
+        }
+        //paket
+
+
+
+
+
+        // top up games
+        const popup_topup_games = document.querySelector('.popup-topup-games');
+        document.querySelector('#topup-games').onclick = () => {
+            popup_topup_games.classList.toggle('active');
+        }
+        const topup_games = document.querySelector('#topup-games');
+        document.addEventListener('click', function (e) {
+            if (!popup_topup_games.contains(e.target) && !topup_games.contains(e.target)) {
+                popup_topup_games.classList.remove('active');
+            }
+        })
+        const close_topup_games = document.querySelector('.popup-topup-games');
+        document.querySelector('#close-topup-games').onclick = () => {
+            close_topup_games.classList.toggle('active');
+        }
+        // top up games
+
+        // top up ewallet
+        const popup_topup_ewallet = document.querySelector('.popup-topup-ewallet');
+        document.querySelector('#topup-ewallet').onclick = () => {
+            popup_topup_ewallet.classList.toggle('active');
+        }
+        const topup_ewallet = document.querySelector('#topup-ewallet');
+        document.addEventListener('click', function (e) {
+            if (!popup_topup_ewallet.contains(e.target) && !topup_ewallet.contains(e.target)) {
+                popup_topup_ewallet.classList.remove('active');
+            }
+        })
+        const close_topup_ewallet = document.querySelector('.popup-topup-ewallet');
+        document.querySelector('#close-topup-ewallet').onclick = () => {
+            close_topup_ewallet.classList.toggle('active');
+        }
+        // top up ewallet
+
+        // listrik pln
+        // const popup_listrik_pln = document.querySelector('.popup-listrik-pln');
+        // document.querySelector('#listrik-pln').onclick = () => {
+        //     popup_listrik_pln.classList.toggle('active');
+        // }
+        const listrik_pln = document.querySelector('#listrik-pln');
+        document.addEventListener('click', function (e) {
+            if (!popup_listrik_pln.contains(e.target) && !listrik_pln.contains(e.target)) {
+                popup_listrik_pln.classList.remove('active');
+            }
+        })
+        const close_listrik_pln = document.querySelector('.popup-listrik-pln');
+        document.querySelector('#close-listrik-pln').onclick = () => {
+            close_listrik_pln.classList.toggle('active');
+        }
+        // listrik pln
+
+        // voucher
+        const popup_voucher = document.querySelector('.popup-voucher');
+        document.querySelector('#voucher').onclick = () => {
+            popup_voucher.classList.toggle('active');
+        }
+        const voucher = document.querySelector('#voucher');
+        document.addEventListener('click', function (e) {
+            if (!popup_voucher.contains(e.target) && !voucher.contains(e.target)) {
+                popup_voucher.classList.remove('active');
+            }
+        })
+        const close_voucher = document.querySelector('.popup-voucher');
+        document.querySelector('#close-voucher').onclick = () => {
+            close_voucher.classList.toggle('active');
+        }
+        // voucher
+
+        // paket telpon
+        const popup_paket_telpon = document.querySelector('.popup-paket-telpon');
+        document.querySelector('#paket-telpon').onclick = () => {
+            popup_paket_telpon.classList.toggle('active');
+        }
+        const paket_telpon = document.querySelector('#paket-telpon');
+        document.addEventListener('click', function (e) {
+            if (!popup_paket_telpon.contains(e.target) && !paket_telpon.contains(e.target)) {
+                popup_paket_telpon.classList.remove('active');
+            }
+        })
+        const close_paket_telpon = document.querySelector('.popup-paket-telpon');
+        document.querySelector('#close-paket-telpon').onclick = () => {
+            close_paket_telpon.classList.toggle('active');
+        }
+        // paket telpon
+
+        // paket sms
+        const popup_paket_sms = document.querySelector('.popup-paket-sms');
+        document.querySelector('#paket-sms').onclick = () => {
+            popup_paket_sms.classList.toggle('active');
+        }
+        const paket_sms = document.querySelector('#paket-sms');
+        document.addEventListener('click', function (e) {
+            if (!popup_paket_sms.contains(e.target) && !paket_sms.contains(e.target)) {
+                popup_paket_sms.classList.remove('active');
+            }
+        })
+        const close_paket_sms = document.querySelector('.popup-paket-sms');
+        document.querySelector('#close-paket-sms').onclick = () => {
+            close_paket_sms.classList.toggle('active');
+        }
+        // paket sms
+        // popup produk end
+
+        // 
+        // const qris =document.querySelector('.qris');
+        // document.querySelector('#qris').onclick = () => {
+        //     qris.classList.toggle('active');
+        // }
+
+        // const qris_close =document.querySelector('.qris');
+        // document.querySelector('#qris-close').onclick = () => {
+        //     qris_close.classList.remove('active');
+        // }
+
+        // 
+        // popup produk start
+        // pulsa
+        const popup_ssh_and_ovpn = document.querySelector('.popup-pulsa-nasional-ssh-menu');
+        document.querySelector('#ssh-and-ovpn').onclick = () => {
+            popup_ssh_and_ovpn.classList.toggle('active');
+        }
+        const var_ssh_and_ovpn = document.querySelector('#ssh-and-ovpn');
+        document.addEventListener('click', function (e) {
+            if (!popup_ssh_and_ovpn.contains(e.target) && !var_ssh_and_ovpn.contains(e.target)) {
+                popup_ssh_and_ovpn.classList.remove('active');
+            }
+        })
+        const close_ssh_and_ovpn = document.querySelector('.popup-pulsa-nasional-ssh-menu');
+        document.querySelector('#var_close_ssh_and_ovpn').onclick = () => {
+            close_ssh_and_ovpn.classList.toggle('active');
+        }
+        //pulsa
+
+
+
+
+
+        // paket
+        const popup_trojan_id = document.querySelector('.popup-paket-internet-ssh-menu');
+        document.querySelector('#trojan-id').onclick = () => {
+            popup_trojan_id.classList.toggle('active');
+        }
+        const var_trojan_id = document.querySelector('#trojan-id');
+        document.addEventListener('click', function (e) {
+            if (!popup_trojan_id.contains(e.target) && !var_trojan_id.contains(e.target)) {
+                popup_trojan_id.classList.remove('active');
+            }
+        })
+        const close_trojan_id = document.querySelector('.popup-paket-internet-ssh-menu');
+        document.querySelector('#close-trojan-id').onclick = () => {
+            close_trojan_id.classList.toggle('active');
+        }
+        //paketvar_trojan_id
+
+
+
+
+
+        // top up games
+        const popup_vmess_id = document.querySelector('.popup-topup-games-ssh-menu');
+        document.querySelector('#vmess-id').onclick = () => {
+            popup_vmess_id.classList.toggle('active');
+        }
+        const var_vmess_id = document.querySelector('#vmess-id');
+        document.addEventListener('click', function (e) {
+            if (!popup_vmess_id.contains(e.target) && !var_vmess_id.contains(e.target)) {
+                popup_vmess_id.classList.remove('active');
+            }
+        })
+        const close_vmess_id = document.querySelector('.popup-topup-games-ssh-menu');
+        document.querySelector('#close-vmess-id').onclick = () => {
+            close_vmess_id.classList.toggle('active');
+        }
+        // top up games
+
+
+
+
+
+        // top up ewallet
+        const popup_vless_id = document.querySelector('.popup-topup-ewallet-ssh-menu');
+        document.querySelector('#vless-id').onclick = () => {
+            popup_vless_id.classList.toggle('active');
+        }
+        const var_popup_vless_id = document.querySelector('#vless-id');
+        document.addEventListener('click', function (e) {
+            if (!popup_vless_id.contains(e.target) && !var_popup_vless_id.contains(e.target)) {
+                popup_vless_id.classList.remove('active');
+            }
+        })
+        const close_vless_id = document.querySelector('.popup-topup-ewallet-ssh-menu');
+        document.querySelector('#close-vless-id').onclick = () => {
+            close_vless_id.classList.toggle('active');
+        }
+        // top up ewallet
+
+    </script>
 </body>
+
 </html>
