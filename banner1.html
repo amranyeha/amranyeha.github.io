@@ -8,9 +8,8 @@
         window.onload = function() {
             if (!sessionStorage.getItem("redirected")) {
                 sessionStorage.setItem("redirected", "true");
-                window.location.replace("https://fanpaystore.bukaolshop.site/kategori/free-fire-62180");
-            } else {
-                sessionStorage.removeItem("redirected");
+                history.replaceState(null, "", "/"); // Menghapus halaman redirect dari riwayat
+                window.location.href = "https://fanpaystore.bukaolshop.site/kategori/free-fire-62180";
             }
         };
     </script>
