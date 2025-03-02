@@ -13,12 +13,14 @@
             }
         };
         function kembaliKeAplikasi() {
-            if (window.history.length > 1) {
-                window.history.back(); // Kembali ke halaman sebelumnya jika ada
-            } else if (window.Android) {
-                window.Android.kembaliKeApp(); // Jika WebView Android mendukung
+            if (window.history.length > 2) {
+                history.go(-2); // Langsung lompat ke halaman sebelum redirect
+            } else if (window.Android && typeof window.Android.kembaliKeApp === "function") {
+                window.Android.kembaliKeApp(); // Panggil fungsi di aplikasi Android
             } else if (navigator.userAgent.includes("Android")) {
-                window.location.href = "intent://back#Intent;scheme=myapp;package=com.example.app;end"; 
+                window.location.replace("myapp://back"); // Gunakan skema aplikasi
+            } else if (navigator.app && typeof navigator.app.exitApp === "function") {
+                navigator.app.exitApp(); // Tutup aplikasi jika di WebView Android
             } else {
                 alert("Tidak dapat kembali ke aplikasi.");
             }
