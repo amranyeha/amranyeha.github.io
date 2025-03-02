@@ -3,17 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <title>Halaman Redirect</title>
     <script>
-        // Cek apakah halaman ini sudah dikunjungi sebelumnya di sesi ini
-        if (sessionStorage.getItem("redirected")) {
-            sessionStorage.removeItem("redirected");
-        } else {
-            sessionStorage.setItem("redirected", "true");
-            window.location.href = "https://fanpaystore.bukaolshop.site/produk/xtra-kuota-30gb-kartu-lama-30-hari-2919469";
-        }
+        window.onload = function() {
+            if (!sessionStorage.getItem("redirected")) {
+                sessionStorage.setItem("redirected", "true");
+                history.replaceState(null, "", "/");
+                window.location.href = "https://fanpaystore.bukaolshop.site/produk/xtra-kuota-30gb-kartu-lama-30-hari-2919469";
+            }
+        };
     </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d1d5db; /* Warna abu-abu */
+        }
+    </style>
 </head>
 <body>
+    <div class="bg-white p-8 rounded-lg shadow-lg text-center max-w-md w-full">
+        <h1 class="text-2xl font-bold text-gray-800">Anda telah dialihkan</h1>
+        <p class="text-gray-600 mt-4">Silakan tekan tombol kembali di perangkat Anda untuk kembali ke halaman sebelumnya.</p>
+        <div class="mt-6 flex justify-center">
+            <svg class="animate-bounce w-10 h-10 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </div>
+    </div>
 </body>
 </html>
