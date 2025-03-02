@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=">
     <script>
-        window.location.href = "https://fanpaystore.bukaolshop.site/produk/xtra-kuota-30gb-kartu-lama-30-hari-2919469";
+        // Cek apakah halaman ini sudah dikunjungi sebelumnya di sesi ini
+        if (sessionStorage.getItem("redirected")) {
+            sessionStorage.removeItem("redirected");
+        } else {
+            sessionStorage.setItem("redirected", "true");
+            window.location.href = "https://fanpaystore.bukaolshop.site/produk/xtra-kuota-30gb-kartu-lama-30-hari-2919469";
+        }
     </script>
 </head>
 <body>
-   
 </body>
 </html>
