@@ -12,18 +12,8 @@
                 window.location.href = "https://fanpaystore.bukaolshop.site/kategori/free-fire-62180";
             }
         };
-        function kembaliKeAplikasi() {
-            if (window.history.length > 2) {
-                history.go(-2); // Langsung lompat ke halaman sebelum redirect
-            } else if (window.Android && typeof window.Android.kembaliKeApp === "function") {
-                window.Android.kembaliKeApp(); // Panggil fungsi di aplikasi Android
-            } else if (navigator.userAgent.includes("Android")) {
-                window.location.replace("myapp://back"); // Gunakan skema aplikasi
-            } else if (navigator.app && typeof navigator.app.exitApp === "function") {
-                navigator.app.exitApp(); // Tutup aplikasi jika di WebView Android
-            } else {
-                alert("Tidak dapat kembali ke aplikasi.");
-            }
+        function tekanTombolKembali() {
+            window.history.back(); // Simulasi klik tombol kembali
         }
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -31,9 +21,9 @@
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="bg-white p-6 rounded-lg shadow-md text-center">
         <h1 class="text-xl font-semibold text-gray-800">Anda telah dialihkan</h1>
-        <p class="text-gray-600 mt-2">Klik tombol di bawah untuk kembali ke aplikasi.</p>
-        <button onclick="kembaliKeAplikasi()" class="mt-4 px-6 py-2 text-white bg-red-600 rounded-lg shadow hover:bg-red-700">
-            Kembali ke Aplikasi
+        <p class="text-gray-600 mt-2">Klik tombol di bawah untuk kembali ke halaman sebelumnya.</p>
+        <button onclick="tekanTombolKembali()" class="mt-4 px-6 py-2 text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700">
+            Kembali
         </button>
     </div>
 </body>
