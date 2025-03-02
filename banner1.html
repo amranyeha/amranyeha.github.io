@@ -13,10 +13,15 @@
             }
         };
         function kembaliKeAplikasi() {
-            if (window.close) {
-                window.close(); // Coba menutup WebView jika didukung
-            } else {
+            var isWebView = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            if (window.Android) {
+                window.Android.kembaliKeApp(); // Memanggil fungsi di aplikasi Android
+            } else if (isWebView) {
                 window.location = "myapp://back"; // Gunakan skema custom untuk kembali ke aplikasi
+            } else if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.close(); // Coba menutup tab jika bukan di WebView
             }
         }
     </script>
