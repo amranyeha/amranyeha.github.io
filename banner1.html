@@ -13,15 +13,14 @@
             }
         };
         function kembaliKeAplikasi() {
-            var isWebView = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-            if (window.Android) {
-                window.Android.kembaliKeApp(); // Memanggil fungsi di aplikasi Android
-            } else if (isWebView) {
-                window.location = "myapp://back"; // Gunakan skema custom untuk kembali ke aplikasi
-            } else if (window.history.length > 1) {
-                window.history.back();
+            if (window.history.length > 1) {
+                window.history.back(); // Kembali ke halaman sebelumnya jika ada
+            } else if (window.Android) {
+                window.Android.kembaliKeApp(); // Jika WebView Android mendukung
+            } else if (navigator.userAgent.includes("Android")) {
+                window.location.href = "intent://back#Intent;scheme=myapp;package=com.example.app;end"; 
             } else {
-                window.close(); // Coba menutup tab jika bukan di WebView
+                alert("Tidak dapat kembali ke aplikasi.");
             }
         }
     </script>
